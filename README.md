@@ -1,1 +1,3 @@
 # AP-BURO
+
+git init
