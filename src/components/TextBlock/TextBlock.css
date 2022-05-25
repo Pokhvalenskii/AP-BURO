@@ -1,0 +1,16 @@
+.textBlock {
+  box-sizing: border-box;
+  padding: 96px 64px 102px;
+  max-width: 1568px;
+  margin: auto;
+  border: 1px solid #D8D8D8;
+}
+
+.textBlock__title {
+  margin: 0;
+  margin-bottom: 19px;
+}
+
+.textBlock__subtitle {
+  margin: 0;
+}

@@ -1,0 +1,154 @@
+.preloader {
+  transition: 1s ease;
+  background-color: #2d2d2d;
+  /* z-index: -1; */
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  /* opacity: 0; */
+  z-index: 2;
+  opacity: 1;
+  animation: hiddenPreloader 1s forwards;
+  animation-delay: 3s
+}
+
+.preloader__wrapper {
+  /* display: flex; */
+  position: absolute;
+  width: 400px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.logo {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.logo__wrapper {
+  animation: rotateLogoX 2s;
+  height: 100px;
+}
+.logo__wrapper2 {
+  animation: translateLogoX 2s forwards;
+  height: 100px;
+}
+.logo__logo {
+  width: 100px;
+  animation: rotateLogoY 2s;
+}
+
+.logo__text {
+  margin: 0;
+  align-self: center;
+}
+
+.preloader__text {
+  display: flex;
+  position: absolute;
+  font-size: 50px;
+  top: 50%;
+  right: 30%;
+  transform: translate(50%, -50%);
+  color: #fff;
+}
+
+.preloader__text-item {
+  opacity: 0;
+  margin-right: 3px;
+}
+
+.preloader__text-item:nth-child(2) {
+  opacity: 0;
+  margin-right: 20px;
+}
+
+.text-item1 {
+  opacity: 0;
+  animation: appearance .1s forwards;
+  animation-delay: 2s;
+}
+.text-item2 {
+  opacity: 0;
+  animation: appearance .1s forwards;
+  animation-delay: 2.1s;
+}
+.text-item3 {
+  opacity: 0;
+  animation: appearance .1s forwards;
+  animation-delay: 2.2s;
+}
+.text-item4 {
+  opacity: 0;
+  animation: appearance .1s forwards;
+  animation-delay: 2.3s;
+}
+.text-item5 {
+  opacity: 0;
+  animation: appearance .1s forwards;
+  animation-delay: 2.4s;
+}
+.text-item6 {
+  opacity: 0;
+  animation: appearance .1s forwards;
+  animation-delay: 2.5s;
+}
+
+
+@keyframes hiddenPreloader {
+  to {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+@keyframes appearance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rotateLogoX {
+  0% {
+    transform: rotateX(0);
+  }
+
+  20% {
+    transform: rotateX(180deg);
+  }
+
+  40% {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes rotateLogoY {
+  40% {
+    transform: rotateY(0);
+  }
+  60% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(0);
+    /* transform: translateX(0); */
+  }
+}
+
+@keyframes translateLogoX {
+  75% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}

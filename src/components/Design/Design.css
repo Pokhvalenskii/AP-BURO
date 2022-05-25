@@ -1,0 +1,36 @@
+.design {
+  display: flex;
+  max-width: 1920px;
+  flex-direction: column;
+  margin: auto;
+  box-sizing: border-box;
+  padding: 47px 176px 83px;
+  background-color: #2f2f2f;
+  color: #fff;
+}
+
+.design__menu {
+  display: flex;
+}
+
+.design__cardPlaces {
+  display: flex;
+}
+
+.design__card {
+  display: flex;
+  position: relative;
+}
+
+.design__card-description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(45, 45, 45, 0.67);
+  height: 142px;
+  transition: .3s ease;
+}
+
+.design__card-description:hover {
+  height: 246px;
+}

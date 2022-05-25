@@ -1,0 +1,50 @@
+.header {
+  background-color: #2D2D2D;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  box-sizing: border-box;
+  max-width: 1558px;
+  width: 100%;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.header__links {
+  display: flex;
+}
+
+.header__timetable {
+  /* margin-left: 607px; */
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.header__select {
+  appearance: none;
+  width: 73px;
+  background: url('../../images/selectPolygon.svg') no-repeat left;
+  padding-left: 17px;
+  text-decoration: underline;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.header__select:focus {
+  outline:none;
+}
+
+.email-link {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 51px;
+}
+
+.link:not(:last-child) {
+  margin-right: 16px;
+}

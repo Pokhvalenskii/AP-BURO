@@ -1,0 +1,35 @@
+.triggers {
+  max-width: 1920px;
+  height: 253px;
+  margin: auto;
+  background-color: #2f2f2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.triggers__item {
+  display: flex;
+  max-width: 315px;
+  height: 75px;
+  width: 100%;
+
+}
+
+.triggers__item:not(:last-child) {
+  margin-right: 149px;
+}
+
+.triggers__wrapper {
+
+}
+
+.triggers__img-wrapper {
+  align-self: center;
+  margin-right: 42px;
+}
+
+.triggers__title {
+  margin-bottom: 8px;
+}
