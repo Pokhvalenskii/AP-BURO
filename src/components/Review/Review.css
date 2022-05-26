@@ -3,12 +3,61 @@
   max-width: 1920px;
   height: 679px;
   margin: auto;
+  transition: 1s ease;
+  transform: translate(0, 100%);
+  opacity: 0;
+}
+
+.review.review_hidden {
+  transform: translate(0, -100%);
+  opacity: 0;
+}
+
+.review.review_showing {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 
 .review__nav {
   border: 1px solid #D8D8D8;
   width: 100%;
   border-left: none;
+}
+
+.review__nav-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 128px;
+}
+
+.review__nav-title {
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  color: #f0f0f0;
+  margin-left: 20px;
+
+}
+
+.review__nav-link {
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: end;
+  text-decoration: none;
+  color: #2d2d2d;
+  margin-left: -45px;
+  cursor: pointer;
 }
 
 .review__main {
@@ -34,26 +83,60 @@
 
 .review__image {
   object-fit: cover;
+  width: 100%;
 }
 
 .review__description {
   margin-left: 55px;
+  width: 100%;
 }
 
 .review__designer {
+  color: #2d2d2d;
   margin-top: 10px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.review__design {
+  color: #ababab;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
 }
 
 .revies__text {
   margin-top: 37px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: #2D2D2D;
 }
 
 .review__stars {
   margin-top: 13px;
 }
 
+.review__stars:hover {
+  opacity: .8;
+}
+
 .review__rating-text {
   margin: 67px 0 0 0;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ABABAB;
 }
 
 .review__slider {
@@ -62,8 +145,16 @@
 }
 
 .review__arrowBtn {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.075em;
   background: none;
   border: none;
+
+  color: #2d2d2d;
 }
 
 .review__pagination {

@@ -8,20 +8,31 @@ import Review from '../Review/Review';
 import Design from '../Design/Design';
 import TextBlock from '../TextBlock/TextBlock';
 import Portfolio from '../Portfolio/Portfolio';
+import { useState } from 'react';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 function App() {
+
+  const [positionY, setPositionY] = useState(0)
+
+  window.addEventListener('scroll', function(evt) {
+    setPositionY(this.scrollY)
+  })
+
   return (
     <div className="App">
       {/* <Preloader /> */}
       <Header />
       <main className='content'>
-        <MainScreen />
-        <Description />
-        <Triggers />
-        <Review />
-        <Design />
-        <TextBlock />
-        <Portfolio />
+        <MainScreen positionY={positionY}/>
+        <Description positionY={positionY}/>
+        <Triggers positionY={positionY}/>
+        <Review positionY={positionY}/>
+        <Design positionY={positionY}/>
+        <TextBlock positionY={positionY}/>
+        <Portfolio positionY={positionY}/>
       </main>
       <footer></footer>
     </div>

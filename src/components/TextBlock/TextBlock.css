@@ -4,6 +4,12 @@
   max-width: 1568px;
   margin: auto;
   border: 1px solid #D8D8D8;
+  transition: 1s ease;
+}
+
+.textBlock.textBlock_hidden {
+  transform: translate(0, -100%);
+  opacity: 0;
 }
 
 .textBlock__title {

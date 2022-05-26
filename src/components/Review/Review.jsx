@@ -2,10 +2,19 @@ import './Review.css';
 import star from '../../images/Star.svg';
 import View18 from '../../images/we__View18.png';
 
-const Review = () => {
+const Review = (props) => {
+  let hidden = props.positionY >= 2500 ? 'review_hidden' : ''
+  let showing = props.positionY >= 1400 && props.positionY <= 2500 ? 'review_showing' : ''
+
+
   return (
-    <section className="review">
-      <div className="review__nav"></div>
+    <section className={`review ${hidden} ${showing}`}>
+      <div className="review__nav">
+        <div className="review__nav-wrapper">
+          <h2 className='review__nav-title'>Отзывы</h2>
+          <a className='review__nav-link' href='#fff' alt='Все'>См. все</a>
+        </div>
+      </div>
       <div className="review__main">
         <div className='review__imagePlace'>
           <img className='review__image' src={View18} alt='View18'/>

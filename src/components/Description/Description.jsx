@@ -2,7 +2,7 @@ import './Description.css'
 import picture from '../../images/description.png'
 
 
-const Description = () => {
+const Description = (props) => {
 
   const data = [
     {
@@ -14,31 +14,31 @@ const Description = () => {
     {
       id: 2,
       title: 'полный проект',
-      price: '1000р',
+      price: '1400₽/м2',
       img: picture
     },
     {
       id: 3,
       title: 'полный проект',
-      price: '1000р',
+      price: '1400₽/м2',
       img: picture
     },
     {
       id: 4,
       title: 'полный проект',
-      price: '1000р',
+      price: '1400₽/м2',
       img: picture
     },
     {
       id: 5,
       title: 'полный проект',
-      price: '1000р',
+      price: '1400₽/м2',
       img: picture
     },
     {
       id: 6,
       title: 'полный проект',
-      price: '1000р',
+      price: '1400₽/м2',
       img: picture
     },
   ]
@@ -85,17 +85,26 @@ const Description = () => {
       text: '+ все что входит в пакет «Авторский надзор»'
     },
   ]
+  let hidden = props.positionY >= 1500 ? 'description_hidden' : ''
+  let showing = props.positionY >= 300 && props.positionY <= 1500 ? 'description_showing' : ''
+
 
   return (
-    <section className='description'>
+    <section className={`description ${hidden} ${showing}`} id='slide-2'>
+      {/* <button onClick={() => {
+        console.log('CLICK')
+          window.location.hash="slide-1";
+      }}>CLICK</button> */}
       <div className='description__container'>
-        <div className='description__nav'></div>
+        <div className='description__nav'>
+          <h2 className='description__nav-title'>тарифы</h2>
+        </div>
         <div className='description__main'>
           <div className='description__placeCards'>
             {
               data.map((item) =>
                 <div key={item.id} className='description__card'>
-                  <img src={item.img} alt='pic'/>
+                  <img className='description__image' src={item.img} alt='pic'/>
                   <div className='description__title'>{item.title}</div>
                   <div className='description__subtitle'>{item.price}</div>
                 </div>
@@ -106,6 +115,9 @@ const Description = () => {
             <p className='description__equipment__title'>Комплектация</p>
             <p className='description__equipment__price'>1400₽/м2</p>
               {descriptionText.map((item) => <p key={item.id} className='description__equipment__subtitle'>{item.text}</p>)}
+              <div className='description__equipment-wrapper'>
+                <button className='description__equipment-button'>Оставить заявку</button>
+              </div>
           </div>
         </div>
         <div className='description__void'></div>

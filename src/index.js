@@ -4,6 +4,14 @@ import './index.css';
 import App from './components/App/App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// window.addEventListener('scroll',function() {
+//   // fix.textContent = this.oldScroll > this.scrollY ? 'ВВЕРХ' : 'ВНИЗ';
+// console.log(this.oldScroll, this.scrollY )
+//   this.oldScroll = this.scrollY;
+//
+// });
+
 root.render(
   <React.StrictMode>
     <App />

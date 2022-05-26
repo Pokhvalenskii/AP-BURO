@@ -6,7 +6,7 @@
   height: 100vh;
   position: absolute;
   /* opacity: 0; */
-  z-index: 2;
+  z-index: 4;
   opacity: 1;
   animation: hiddenPreloader 1s forwards;
   animation-delay: 3s

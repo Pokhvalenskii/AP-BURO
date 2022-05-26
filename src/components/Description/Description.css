@@ -4,6 +4,9 @@
   /* width: 100%; */
   height: 883px;
   margin: auto;
+  transition: 1s ease;
+  transform: translate(0, 100%);
+  /* opacity: 0; */
   /* background-color: antiquewhite; */
 }
 
@@ -21,10 +24,50 @@
   border-bottom: none;
 }
 
+.description__nav-title {
+  margin: 73px auto 0;
+  color: #E3E3E3;
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  text-transform: uppercase;
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+}
+
+.description__equipment-wrapper {
+  text-align: center;
+  margin-top: 72px;
+}
+
+.description__equipment-button {
+  border: none;
+  background-color: #333333;
+  width: 180px;
+  height: 42px;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  cursor: pointer;
+  /* identical to box height */
+
+  letter-spacing: 0.025em;
+}
+
+.description__equipment-button:hover {
+  opacity: .9;
+}
+
 .description__main {
   display: flex;
   border: 1px solid #D8D8D8;
-  width: 1566px;
+  max-width: 1566px;
+  width: 100%;
   justify-content: space-between;
   flex-shrink: 0;
   height: 100%;
@@ -42,7 +85,6 @@
 }
 
 .description__placeCards {
-
   display: flex;
   flex-wrap: wrap;
   max-width: 882px;
@@ -69,6 +111,15 @@
   position: absolute;
   bottom: 53px;
   left: 31px;
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  /* identical to box height */
+
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
 }
 
 .description__subtitle {
@@ -76,18 +127,49 @@
   bottom: 29px;
   left: 31px;
   color: #FF7A00;
+  font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 29px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.025em;
 }
 
 .description__equipment__title {
   margin: 0;
   margin-bottom: 3px;
 }
-
+.description__equipment__subtitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 29px;
+  margin: 0;
+}
 .description__equipment__price {
   margin: 0;
   margin-bottom: 10px;
+}
+
+.description__image {
+  object-fit: cover;
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .description__placeCards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+}
+
+.description.description_hidden {
+  transform: translate(0, -200%);
+  /* opacity: 0; */
+}
+
+.description.description_showing {
+  transform: translate(0, 0);
+  /* opacity: 1; */
 }

@@ -1,4 +1,6 @@
 .header {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   background-color: #2D2D2D;
   display: flex;
   justify-content: center;
@@ -12,10 +14,14 @@
   width: 100%;
   justify-content: space-between;
   color: #fff;
+  height: 34px;
+  /* align-self: center; */
+  align-items: center;
 }
 
 .header__links {
   display: flex;
+  align-items: center;
 }
 
 .header__timetable {
@@ -26,6 +32,8 @@
 }
 
 .header__select {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
   appearance: none;
   width: 73px;
   background: url('../../images/selectPolygon.svg') no-repeat left;

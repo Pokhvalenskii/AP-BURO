@@ -1,6 +1,9 @@
 import './Triggers.css';
 import image from '../../images/paint-roller.svg'
-const Triggers = () => {
+const Triggers = (props) => {
+
+  let hidden = props.positionY >= 2500 ? 'triggers_hidden' : ''
+  let showing = props.positionY >= 1300 && props.positionY <= 2500 ? 'triggers_showing' : ''
 
   const triggerData = [
     {
@@ -24,7 +27,7 @@ const Triggers = () => {
   ]
 
   return (
-    <section className='triggers'>
+    <section className={`triggers ${hidden} ${showing}`} id='slide-3'>
       {
         triggerData.map((item) =>
           <div key={item.id} className='triggers__item'>
