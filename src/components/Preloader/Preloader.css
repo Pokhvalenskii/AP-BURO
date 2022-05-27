@@ -4,9 +4,9 @@
   /* z-index: -1; */
   width: 100vw;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   /* opacity: 0; */
-  z-index: 4;
+  z-index: 10;
   opacity: 1;
   animation: hiddenPreloader 1s forwards;
   animation-delay: 3s
@@ -62,10 +62,12 @@
 .preloader__text-item {
   opacity: 0;
   margin-right: 3px;
+  width: 25px;
+  height: 25px;
 }
 
 .preloader__text-item:nth-child(2) {
-  opacity: 0;
+  /* opacity: 0; */
   margin-right: 20px;
 }
 
@@ -98,6 +100,11 @@
   opacity: 0;
   animation: appearance .1s forwards;
   animation-delay: 2.5s;
+}
+.text-item7 {
+  opacity: 0;
+  animation: appearance .1s forwards;
+  animation-delay: 2.6s;
 }
 
 

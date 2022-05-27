@@ -23,8 +23,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Preloader /> */}
-      <Header />
+      <Preloader />
+      <Header positionY={positionY}/>
       <main className='content'>
         <MainScreen positionY={positionY}/>
         <Description positionY={positionY}/>

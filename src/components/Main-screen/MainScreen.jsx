@@ -6,6 +6,7 @@ import { useState } from 'react';
 const MainScreen = (props) => {
   const [popup, setPopup] = useState(false);
   const active = popup ? 'menuPopup_active' : '';
+  let showing = props.positionY >= 60 ? 'main-screen__menu_showing' : ''
 
   function toggle() {
     if(!popup) {
@@ -23,10 +24,10 @@ const MainScreen = (props) => {
   return (
     <section className={`main-screen ${hidden}`} id='slide-1'>
       <div className='main-screen__wrapper'>
-        <nav className='main-screen__menu'>
+        <nav className={`main-screen__menu ${showing}`}>
           <div className='main-screen__logo'>LOGO</div>
 
-          <div className='main-screen__burger-menuBtn' onClick={toggle}>
+          <div className={`main-screen__burger-menuBtn`} onClick={toggle}>
             <div className='main-screen__burgerBtn' ></div>
           </div>
 

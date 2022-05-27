@@ -16,24 +16,26 @@ const Design = (props) => {
         <div className='design__card'>
           <img src={View12} alt='View12' className='design__card-image'/>
           <div className='design__card-description'>
-            <div className='design__title'>Lorem, ipsum.</div>
-            <div className='design__subtitle'>Lorem ipsum dolor sit amet.</div>
+            <div className='design__title'>Жилые помещения </div>
+            <p className='design__text'>- Частные дома</p>
+            <p className='design__text'>- Квартиры</p>
+            <p className='design__text'>- Коттеджи</p>
             <button className='design__button'>Заказать</button>
           </div>
         </div>
         <div className='design__card'>
           <img src={View12} alt='View12' className='design__card-image'/>
           <div className='design__card-description'>
-            <div className='design__title'>Lorem, ipsum.</div>
-            <div className='design__subtitle'>Lorem ipsum dolor sit amet.</div>
+            <div className='design__title'>Жилые помещения </div>
+            <div className='design__text'>Lorem ipsum dolor sit amet.</div>
             <button className='design__button'>Заказать</button>
           </div>
         </div>
         <div className='design__card'>
           <img src={View12} alt='View12' className='design__card-image'/>
           <div className='design__card-description'>
-            <div className='design__title'>Lorem, ipsum.</div>
-            <div className='design__subtitle'>Lorem ipsum dolor sit amet.</div>
+            <div className='design__title'>Жилые помещения </div>
+            <div className='design__text'>Lorem ipsum dolor sit amet.</div>
             <button className='design__button'>Заказать</button>
           </div>
         </div>

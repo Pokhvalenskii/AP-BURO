@@ -25,11 +25,43 @@
 }
 
 .design__menu {
+  position: relative;
   display: flex;
   max-width: 1568px;
   width: 100%;
+  margin-top: 47px;
+  margin-bottom: 40px;
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  /* identical to box height */
+
+  letter-spacing: 0.025em;
+
 }
 
+.design__interior {
+  color: #EFEFEF;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-right: 141px;
+}
+
+.design__interior::before {
+  position: absolute;
+  content: '';
+  border-bottom: 1px solid #fff;
+  width: 270px;
+  bottom: 0;
+}
+
+.design__architecture {
+  color: #575757;
+  margin: 0;
+  margin-bottom: 10px;
+}
 .design__cardPlaces {
   display: flex;
   max-width: 1568px;
@@ -38,6 +70,7 @@
 .design__card {
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .design__card-image {
@@ -45,15 +78,60 @@
   width: 100%;
 }
 
+.design__title {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+.design__text {
+  margin: 0;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #DCDCDC;
+}
+
+.design__button {
+  position: absolute;
+  bottom: 46px;
+  width: 180px;
+  height: 42px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.025em;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.design__button:hover {
+  opacity: .7;
+}
+
 .design__card-description {
+  box-sizing: border-box;
+  padding: 27px 29px 46px;
   position: absolute;
   bottom: 0;
   width: 100%;
   background: rgba(45, 45, 45, 0.67);
-  height: 142px;
+  height: 246px;
   transition: .3s ease;
+  transform: translate(0, 104px);
 }
 
 .design__card-description:hover {
-  height: 246px;
+  transform: translate(0, 0px);
 }

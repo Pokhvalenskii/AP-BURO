@@ -28,6 +28,8 @@
   display: flex;
   justify-content: center;
   margin-top: 128px;
+  position: absolute;
+  left: 62px;
 }
 
 .review__nav-title {
@@ -41,7 +43,7 @@
   letter-spacing: 0.025em;
   text-transform: uppercase;
   color: #f0f0f0;
-  margin-left: 20px;
+  margin: 0;
 
 }
 
@@ -56,7 +58,7 @@
   text-align: end;
   text-decoration: none;
   color: #2d2d2d;
-  margin-left: -45px;
+  /* margin-left: -45px; */
   cursor: pointer;
 }
 
@@ -153,8 +155,12 @@
   letter-spacing: 0.075em;
   background: none;
   border: none;
-
+  cursor: pointer;
   color: #2d2d2d;
+}
+
+.review__arrowBtn:hover {
+  opacity: .7;
 }
 
 .review__pagination {
